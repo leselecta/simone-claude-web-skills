@@ -1,4 +1,4 @@
-# simone-claude-skills
+# simone-claude-web-skills
 
 A small collection of agent skills for web development, written once and
 distributed to multiple coding assistants. Works with Claude Code, Cursor,

@@ -1,0 +1,19 @@
+{
+  "name": "simone-claude-skills",
+  "version": "0.1.0",
+  "description": "Cross-tool agent skills for web development (a11y audit, image optimisation).",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "author": "Simone Ferraro",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leselecta/simone-claude-skills"
+  }
+}

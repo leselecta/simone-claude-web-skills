@@ -10,6 +10,7 @@ Codex CLI, Cline, Continue.dev, and anything that can read a prompt file.
 |---|---|
 | **`img-optimise`** | Audits every image in the project (size, dimensions, format, references), reports a prioritised table, then fixes issues one category at a time using Pillow / pngquant / ImageMagick / sips. |
 | **`a11y-audit`** | Runs a WCAG 2.1 AA accessibility audit across pages, CSS, and JS. Groups findings by severity, then fixes them one at a time with visual regression checks. |
+| **`seo-optimise`** | Audits on-page SEO and discoverability (titles, meta descriptions, canonicals, Open Graph / Twitter cards, sitemap, robots.txt, JSON-LD, breadcrumbs), reports a prioritised table, then fixes each area. Framework-agnostic: detects the stack and adapts the injection mechanism. |
 
 Both skills are designed for **agentic coding tools** that can read project
 files and execute shell commands. They will not work in plain chat interfaces
@@ -27,11 +28,12 @@ Copy the skill folder into your skills directory:
 
 ```bash
 cp -r skills/img-optimise ~/.claude/skills/
-cp -r skills/a11y-audit  ~/.claude/skills/
+cp -r skills/a11y-audit   ~/.claude/skills/
+cp -r skills/seo-optimise ~/.claude/skills/
 ```
 
-Claude Code auto-discovers skills on next launch. Invoke with `/img-optimise`
-or `/a11y-audit`.
+Claude Code auto-discovers skills on next launch. Invoke with `/img-optimise`,
+`/a11y-audit`, or `/seo-optimise`.
 
 ### Cursor
 

@@ -19,6 +19,23 @@ files and execute shell commands. They will not work in plain chat interfaces
 
 ---
 
+## Usage
+
+Every skill follows the same audit-then-fix shape and accepts the same flags.
+Invoke a skill by name (in Claude Code, `/<skill-name>`):
+
+| Invocation | What happens |
+|---|---|
+| `/<skill>` | **Default.** Audits the project, shows a prioritised findings table, then fixes issues interactively — asking for your approval as it goes. Nothing is changed silently. |
+| `/<skill> --audit-only` | **Report only.** Audits and prints the findings, then stops. Makes no changes. Good for a first look, an unfamiliar codebase, or a new stack. |
+| `/<skill> --fix-only` | Skips the audit and applies the known/pending fixes. Use when you've already reviewed the findings. |
+| `/<skill> <path>` | Scopes the run to a folder or glob instead of the whole project. |
+
+In short: run it bare to audit **and** fix (with approvals), or add
+`--audit-only` to just look first. The same flags work across all four skills.
+
+---
+
 ## Install
 
 Pick the section for your tool.

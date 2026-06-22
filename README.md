@@ -11,8 +11,9 @@ Codex CLI, Cline, Continue.dev, and anything that can read a prompt file.
 | **`img-optimise`** | Audits every image in the project (size, dimensions, format, references), reports a prioritised table, then fixes issues one category at a time using Pillow / pngquant / ImageMagick / sips. |
 | **`a11y-audit`** | Runs a WCAG 2.1 AA accessibility audit across pages, CSS, and JS. Groups findings by severity, then fixes them one at a time with visual regression checks. |
 | **`seo-optimise`** | Audits on-page SEO and discoverability (titles, meta descriptions, canonicals, Open Graph / Twitter cards, sitemap, robots.txt, JSON-LD, breadcrumbs), reports a prioritised table, then fixes each area. Framework-agnostic: detects the stack and adapts the injection mechanism. |
+| **`privacy-selfhost`** | Finds every third-party asset a site loads (web fonts, JS/CSS libraries, icon fonts, embeds, trackers), classifies each as safe-to-self-host vs must-stay-remote, self-hosts the safe ones, and verifies zero external requests. Framework-agnostic. |
 
-Both skills are designed for **agentic coding tools** that can read project
+These skills are designed for **agentic coding tools** that can read project
 files and execute shell commands. They will not work in plain chat interfaces
 (ChatGPT web, Claude.ai web) because they need to run commands on your machine.
 
@@ -27,13 +28,14 @@ Pick the section for your tool.
 Copy the skill folder into your skills directory:
 
 ```bash
-cp -r skills/img-optimise ~/.claude/skills/
-cp -r skills/a11y-audit   ~/.claude/skills/
-cp -r skills/seo-optimise ~/.claude/skills/
+cp -r skills/img-optimise     ~/.claude/skills/
+cp -r skills/a11y-audit       ~/.claude/skills/
+cp -r skills/seo-optimise     ~/.claude/skills/
+cp -r skills/privacy-selfhost ~/.claude/skills/
 ```
 
 Claude Code auto-discovers skills on next launch. Invoke with `/img-optimise`,
-`/a11y-audit`, or `/seo-optimise`.
+`/a11y-audit`, `/seo-optimise`, or `/privacy-selfhost`.
 
 ### Cursor
 

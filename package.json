@@ -1,7 +1,7 @@
 {
   "name": "simone-claude-web-skills",
   "version": "0.1.0",
-  "description": "Cross-tool agent skills for web development (a11y audit, image optimisation, SEO optimisation).",
+  "description": "Cross-tool agent skills for web development (a11y audit, image optimisation, SEO optimisation, privacy self-hosting).",
   "type": "module",
   "private": true,
   "scripts": {
